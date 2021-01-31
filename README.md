@@ -3,4 +3,4 @@
 Repository containing all the project code required for CS4221. Navigate to each individual folder for more information
 
 ## Projects
-1. [Fabian](./Fabian/README.md)
+1. [Fabian](./Fabian)
