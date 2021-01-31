@@ -1,0 +1,18 @@
+version: "3"
+
+volumes:
+  pgdata:
+
+services:
+  fp-db:
+    image: postgres
+    container_name: fp-db
+    env_file:
+      - ./dev.env
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./migrations/FPSchema.sql:/docker-entrypoint-initdb.d/1-FPSchema.sql
+      - ./migrations/FPPopulate.sql:/docker-entrypoint-initdb.d/2-FPPopulate.sql
+      - ./migrations/FPTest.sql:/docker-entrypoint-initdb.d/3-FPTest.sql
+    expose:
+      - "5432"
