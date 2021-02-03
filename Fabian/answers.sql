@@ -80,7 +80,9 @@
 /* Answer Question 3 below (constraints or indexes)                           */
 /******************************************************************************/
 
-<constraints or indexes>
+ALTER TABLE employee ADD PRIMARY KEY (empid); -- Add constraints
+ALTER TABLE payroll ADD PRIMARY KEY (empid);
+CREATE INDEX ON payroll (salary); -- Add indexes
 
 -- Indicate the new average measured times for 1000 executions for each of the 
 -- five queries. 
