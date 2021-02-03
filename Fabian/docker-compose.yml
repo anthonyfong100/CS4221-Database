@@ -16,3 +16,5 @@ services:
       - ./migrations/FPTest.sql:/docker-entrypoint-initdb.d/3-FPTest.sql
     expose:
       - "5432"
+    ports:
+      - "5432:5432"
